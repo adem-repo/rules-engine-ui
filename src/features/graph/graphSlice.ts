@@ -69,6 +69,11 @@ export function removeEdgeHelper(graph: Graph, edgeID: EdgeID): Graph {
     return graph;
 }
 
+export function validateGraphHelper(graph: Graph): boolean {
+
+    return false;
+}
+
 // export function breadthFirstSearch(graph: Graph, start: NodeID, desired: NodeID) {
 //     const queue: Array<NodeID> = [start];
 //     const visited = new Set();
@@ -130,6 +135,9 @@ export const graphSlice = createSlice({
         },
         removeEdge: (graph, action: PayloadAction<EdgeID>) => {
             graph = {...removeEdgeHelper(graph, action.payload)};
+        },
+        validateGraph: (graph, action: PayloadAction<Graph>) => {
+
         }
     },
 });
